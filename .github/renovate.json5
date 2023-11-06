@@ -1,4 +1,6 @@
- "regexManagers": [
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+"regexManagers": [
     {
       "datasourceTemplate": "github-releases",
       "fileMatch": [
@@ -10,3 +12,4 @@
       ],
     },
   ]
+}
