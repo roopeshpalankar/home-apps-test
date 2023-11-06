@@ -14,7 +14,7 @@ resources:
 helmChartInflationGenerator:
 - chartName: argocd
   chartRepoUrl: https://argoproj.github.io/argo-helm
-  chartVersion: 5.32.0
+  chartVersion: 5.30.0
   releaseName: argocd
   releaseNamespace: argocd
   # override with these custom values
