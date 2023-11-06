@@ -7,7 +7,7 @@
         "argocd-config/base/.*\\.yaml"
       ],
       "matchStrings": [
-        "targetRevision:\\s+(?<currentValue>.*)" 
+        "chartVersion:\\s+(?<currentValue>.*)" 
       ],                                                                                                                                                
       
     },
