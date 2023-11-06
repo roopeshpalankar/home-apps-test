@@ -6,7 +6,8 @@
           "argocd-config/base/.*\\.yaml"
         ],
         "matchStrings": [
-          " +targetRevision: +(?<currentValue>[^'\" ]+) +# renovate: depName=(?<depName>[^ \\n]+) +(extractVersion=(?<extractVersion>[^\\n]+))?",
+          " +targetRevision: +(?<currentValue>[^'\" ]+) renovate: depName=argoproj/argo-helm extractVersion=^argo-cd-(?<version>.+)$,
+
         ],
       },
     ]
