@@ -1,13 +1,18 @@
 {
-  "regexManagers": [
-      {
-        "datasourceTemplate": "github-releases",
-        "fileMatch": [
-          "argocd-config/base/.*\\.yaml"
-        ],
-        "matchStrings": [
-          " +targetRevision: +(?<currentValue>[^'\" ]+) #renovate: depName=argoproj/argo-helm extractVersion=^argo-cd-(?<version>.+)$
-        ],
-      },
-    ]
+  "extends": ["config:base"],
+  "dependencyDashboard": {
+    "enabled": true
+  },
+  "updates": [
+    {
+      "packageRules": [
+        {
+          "packageNames": ["argocd"],
+          "packagePatterns": ["helm/charts/argocd"],
+          "datasourceTemplate": "helm",
+          "enabled": true
+        }
+      ]
+    }
+  ]
 }
