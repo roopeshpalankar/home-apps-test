@@ -1,10 +1,15 @@
 {
-  "extends": ["config:base"],
-  "packageRules": [
+   "regexManagers": [
     {
-      "updateTypes": ["patch"],
-      "depTypeList": ["helm"],
-      "packagePatterns": ["argocd/argocd"]
-    }
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "argoproj/argo-helm",   
+      "fileMatch": [
+        "argocd-config/base/.*\\.yaml"
+      ],
+      "matchStrings": [
+        "targetRevision:\\s+(?<currentValue>.*)" 
+      ],                                                                                                                                                
+      
+    },
   ]
 }
