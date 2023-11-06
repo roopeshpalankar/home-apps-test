@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
   "dependencyDashboard": {
-     enabled: true
+    "enabled": true
   },
   "updates": [
     {
