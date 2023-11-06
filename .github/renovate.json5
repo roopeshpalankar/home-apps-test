@@ -1,18 +1,10 @@
 {
   "extends": ["config:base"],
-  "dependencyDashboard": {
-    "enabled": true
-  },
-  "updates": [
+  "packageRules": [
     {
-      "packageRules": [
-        {
-          "packageNames": ["argocd"],
-          "packagePatterns": ["helm/charts/argocd"],
-          "datasourceTemplate": "helm",
-          "enabled": true
-        }
-      ]
+      "updateTypes": ["patch"],
+      "depTypeList": ["helm"],
+      "packagePatterns": ["argocd/argocd"]
     }
   ]
 }
